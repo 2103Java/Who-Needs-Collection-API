@@ -4,100 +4,54 @@ import java.util.Set;
 
 import com.example.mystructures.lists.MyList;
 import com.example.mystructures.lists.MyListImpl;
+import com.example.mystructures.lists.MyListQueue;
+import com.example.mystructures.queue.MyQueue;
+import com.example.mystructures.set.MySet;
+import com.example.mystructures.set.MySetImpl;
 
 public class MainDriver {
 	
 	public static void main(String[] args) {
 		
-		/*
-		 * What is an array in Java?
-		 * 
-		 * Collection of same data elements, they can be primitives or Objects
-		 * 
-		 * Arrays are indexed, they start from 0 
-		 * 
-		 * Arrays are immutable - their lengths don't change.
-		 * 
-		 * They don't have any utility methods 
-		 * 
-		 * You can iterate through an array 
-		 * 
-		 * 
-		 * 
-		 */
+		MyList<String> aList = new MyListQueue<String>("Lorem ipsum", "something something");
+//		MyQueue<String> aQueue = new MyListQueue<String>("It's just a jump to the left", "And then a step to the right");
+		
+//		MySet<String> aSet = new MySetImpl<String>("Don't try it Anakin", "I have the high ground!");
 //		
-//		String[] arrayOfStrings = new String[10];
-//		Integer[] arrayOfInts = {1,2,3};
+//		aSet.add("Why hello there!");
+//		aSet.add("GENERAL KENOBI!");
 //		
-		/*
-		 * int takes 32 bits of information 
-		 * 
-		 * Integer is an object, wrapped around an int. This means we get some methods with it!
-		 */
+//		System.out.println(aSet.toString());
 //		
-//		int i1 = 2; //primitive variable
-//		Integer i2 = 4; //reference variable 
+//		System.out.println(aSet.size());
 //		
-//		i1. no methods
-//		i2. lots of methods
+//		aSet.remove("I have the high ground!");
 //		
-//
-//		int a = arrayOfStrings.length; //this is not a method, just a property 
+//		System.out.println(aSet.toString());
+		
+		
+		
+//		aQueue.add("You put your hands on your hips");
 //		
-//		arrayOfStrings. arrays only have Object Class methods
+//		System.out.println(aQueue.toString());
 //		
-//		java.lang.reflect.Array.set(arrayOfStrings, 2, "Hello");
-//		java.lang.reflect.Array.set(arrayOfStrings, 1, "Hi");
-//		
-//		arrayOfStrings[4] = "Hallo";
-//		
-//		System.out.println(arrayOfStrings[1]);
-//		System.out.println(arrayOfStrings[2]);
-//		
-//		for(String s: arrayOfStrings) {
-//			System.out.println(s);
-//		}
-//		
-//		for(int t: arrayOfInts) {
-//			System.out.println(t);
-//		}
-		
-		String s = "Hello";
-		Object o = 3;
-		
-		//Turning a primitive into a object, is boxing. (Autoboxing is implicit)
+//		aQueue.remove();
+//		System.out.println(aQueue.toString());
 		
 		
-		Double b = 2.0; //implicit 
-		double b2 = b; //
+		aList.add("This is a string");
+		aList.add("This is a string at index 2", 2);
+		System.out.println(aList.toString());
 		
+		System.out.println(aList.get(2));
 		
-		Object o2 = new Object();
+		System.out.println(aList.getIndex("This is a string at index 2"));
 		
-		System.out.println(o);
-		System.out.println(o2);
+		aList.remove(2);
+		System.out.println(aList.toString());
 		
-//		String s1 = (String) new Object();
-		
-		
-		MyList<String> stringMyList = new MyListImpl<String>("Apples","Kiwi","Berries");
-		
-		MyList<Integer> integerList = new MyListImpl<Integer>(1,2,3,4,5,6);
-		
-//		MyListImpl<Book> bookList = new BenImpl<>();  this doesn't work
-//		MyList<Book> bookList = new BenImpl<>(); this does
-		
-		stringMyList.add("Banana");
-		stringMyList.add("Dragon Fruit");
-		
-	
-		
-//		System.out.println(stringMyList.toString());
-		
-		Set<String> a;
-		
-
-		
+		aList.update("Yes please I want to be done", 0);
+		System.out.println(aList.toString());
 	}
 
 }
