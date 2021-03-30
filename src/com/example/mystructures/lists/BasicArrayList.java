@@ -16,10 +16,8 @@ public class BasicArrayList<T> extends AbstractArrayStructure<T> implements MyLi
     public boolean add(T t) {
         ensureSize();
 
-        structure[internalSize] = t;
-
-        internalSize++;
-        return false;
+        structure[internalSize++] = t;
+        return true;
     }
 
     @Override

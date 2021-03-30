@@ -1,7 +1,5 @@
 package com.example.mystructures;
 
-import java.util.Arrays;
-
 public abstract class AbstractArrayStructure<T> implements RootStructure<T> {
     protected T[] structure;
     protected int internalSize;
@@ -40,10 +38,8 @@ public abstract class AbstractArrayStructure<T> implements RootStructure<T> {
     public String toString() {
         StringBuilder s = new StringBuilder("Here's the list of objects: ");
 
-        for (Object o : structure) {
-            if (o != null) {
-                s.append(o).append(' ');
-            }
+        for (int i = 0; i < internalSize; i++) {
+            s.append(structure[i]).append(' ');
         }
 
         return s.toString();
