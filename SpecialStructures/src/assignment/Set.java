@@ -2,6 +2,14 @@ package assignment;
 
 public class Set<T> extends RootStructure<T> {
 
+    public Set(T... array ) {
+		//var-args are dynamic, and can accept any number of arguments
+		setStructure(array);
+	}
+    
+    /**
+	 * Adds an element to the end of a new array and replaces it
+	 */
     @Override
     public boolean add(T t) {
             T[] newArray = (T[]) new Object[getStructure().length + 1];
@@ -15,6 +23,11 @@ public class Set<T> extends RootStructure<T> {
             return false;
     }
     
+    /**
+    * Subjects a specified element by making 2 arrays and replacing
+    * the original with a new array that doen't not hava a specified
+    * element, t
+    */
     public boolean remove(T t) {
             
             T[] newArray = (T[]) new Object[getStructure().length-1];
@@ -28,4 +41,4 @@ public class Set<T> extends RootStructure<T> {
             return false;
     }
 
-} 
+}
