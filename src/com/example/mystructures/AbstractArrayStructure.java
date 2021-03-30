@@ -6,7 +6,6 @@ public abstract class AbstractArrayStructure<T> implements RootStructure<T> {
 
     public AbstractArrayStructure() {
         structure = (T[]) new Object[8];
-        internalSize = 8;
     }
 
     public AbstractArrayStructure(T... structure) {
@@ -15,7 +14,6 @@ public abstract class AbstractArrayStructure<T> implements RootStructure<T> {
 
         if (structure.length == 0) {
             this.structure = (T[]) new Object[8];
-            internalSize = 8;
         }
     }
 
