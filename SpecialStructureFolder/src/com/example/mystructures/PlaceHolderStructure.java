@@ -2,10 +2,18 @@ package com.example.mystructures;
 
 public class PlaceHolderStructure<T> implements RootStructure<T> {
 
+	
+
 	@Override
-	public void add(T t) {
+	public boolean add(T t) {
 		// TODO Auto-generated method stub
-		
+		return false;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

@@ -15,7 +15,7 @@ public class BenImpl<E> implements MyList<E> {
 	}
 
 	@Override
-	public Object get(int index) {
+	public E get(int index) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -36,6 +36,12 @@ public class BenImpl<E> implements MyList<E> {
 	public boolean update(E e, int index) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
