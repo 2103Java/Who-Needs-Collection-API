@@ -1,0 +1,32 @@
+Things to implement and how we want to do it
+	Generic Interface for set queue and list:
+Methods
+o	Add()
+o	getSize()
+o	isEmpty()
+o	contains(E e)
+o	clear()/empty()
+Parameters
+o	size
+
+Class for Set
+o	remove by value
+
+
+Class for List and Queue ( public ListOrQueue{})
+o	list is indexed
+o	queue is traversed by reference to neighbor (need head and tail node)
+o	What should we do to handle these in the same class?
+	Remove List vs queue
+•	List removes by value or index
+•	Queue removes head element (so use first/last index?)
+
+Deliverables:
+o	Interface
+o	Ancel
+o	Set
+o	Brady 
+o	ListOrQueue
+o	Dante, Hassan
+o	ReadME
+o	Ben
