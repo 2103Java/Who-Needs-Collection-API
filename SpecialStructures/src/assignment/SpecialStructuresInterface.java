@@ -6,6 +6,6 @@ public interface SpecialStructuresInterface<T> {
 	int getSize();
 	boolean add(T t);
 	boolean contains(T t);
-	boolean clear();
+	void clear();
 	
 }

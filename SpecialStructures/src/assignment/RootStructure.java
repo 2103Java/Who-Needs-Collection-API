@@ -1,10 +1,9 @@
 package assignment;
 
-public abstract class Set<T> implements SpecialStructuresInterface<T> {
+public abstract class RootStructure<T> implements SpecialStructuresInterface<T> {
 	
 	private T[] internalArray;
-	
-	
+
 	@Override
 	public boolean isEmpty() {
 		return this.internalArray.length == 0;
@@ -12,26 +11,23 @@ public abstract class Set<T> implements SpecialStructuresInterface<T> {
 
 	@Override
 	public int getSize() {
-		
 		return this.internalArray.length;
 	}
 
-	@Override
-	public boolean add(T t) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 	@Override
 	public boolean contains(T t) {
-		// TODO Auto-generated method stub
+		for(T mem: this.internalArray) {
+			if (mem.equals(t)){
+				return true;
+			}
+		}
 		return false;
 	}
 
 	@Override
-	public boolean clear() {
-		// TODO Auto-generated method stub
-		return false;
+	public void clear() {
+		T[] newArray = (T[]) new Object[0];
+		this.internalArray = newArray;
 	}
-
 }
