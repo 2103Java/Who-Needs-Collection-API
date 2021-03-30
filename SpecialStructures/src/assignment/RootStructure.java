@@ -30,4 +30,8 @@ public abstract class RootStructure<T> implements SpecialStructuresInterface<T> 
 		T[] newArray = (T[]) new Object[0];
 		this.internalArray = newArray;
 	}
+	
+	
+	public T[] getStructure() { return this.internalArray; }
+	public void setStructure(T[] t) {this.internalArray = t;};
 }
