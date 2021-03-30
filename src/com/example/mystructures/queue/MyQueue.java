@@ -7,6 +7,4 @@ public interface MyQueue<T> extends RootStructure<T> {
 
 	public T pop();
 
-	public T remove();
-
 }

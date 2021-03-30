@@ -1,56 +1,23 @@
 package com.example.mystructures.queue;
 
 import com.example.mystructures.AbstractArrayStructure;
+import com.example.mystructures.lists.BasicArrayList;
 import com.example.mystructures.lists.MyList;
 
-public class BasicArrayQueue extends AbstractArrayStructure implements MyQueue, MyList  {
+public class BasicArrayQueue<T> extends BasicArrayList<T> implements MyQueue<T>  {
+
     @Override
-    public boolean add(Object o) {
-        return false;
+    public T peak() {
+        return structure[0];
     }
 
     @Override
-    public int size() {
-        return 0;
+    public T pop() {
+        T removedEle = structure[0];
+        for (int i = 0; i < internalSize; i++)
+            structure[i] = structure[i+1];
+        internalSize--;
+        return removedEle;
     }
 
-    @Override
-    public Object peak() {
-        return null;
-    }
-
-    @Override
-    public Object pop() {
-        return null;
-    }
-
-    @Override
-    public Object remove() {
-        return null;
-    }
-
-    @Override
-    public boolean add(Object o, int index) {
-        return false;
-    }
-
-    @Override
-    public Object get(int index) {
-        return null;
-    }
-
-    @Override
-    public int getIndex(Object o) {
-        return 0;
-    }
-
-    @Override
-    public boolean remove(int index) {
-        return false;
-    }
-
-    @Override
-    public boolean update(Object o, int index) {
-        return false;
-    }
 }
