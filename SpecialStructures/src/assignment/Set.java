@@ -44,6 +44,14 @@ public class Set<T> extends RootStructure<T> {
     @Override
     public boolean add(T t) {
     	
+    		// If the set already contains t, don't add it again, and return false
+    		for (T obj : getStructure()) {
+    			if (obj.equals(t)) {
+    				return false;
+    			}
+    		}
+    		
+    		// Otherwise, add the element t and return true
             T[] newArray = (T[]) new Object[getStructure().length + 1];
             
             for(int i = 0; i < getStructure().length; i++) {
@@ -52,7 +60,7 @@ public class Set<T> extends RootStructure<T> {
             newArray[newArray.length - 1] = t;
             setStructure(newArray);
             
-            return false;
+            return true;
     }
     
     /**
