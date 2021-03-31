@@ -134,6 +134,7 @@ public class ListQueue<E> implements MyList<E>, MyQueue<E>{
 	public boolean dequeue() {
 		return remove(0);
 	}
+	
 
 
 	@Override
