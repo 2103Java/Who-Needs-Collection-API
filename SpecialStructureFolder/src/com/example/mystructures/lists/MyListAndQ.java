@@ -1,6 +1,8 @@
 package com.example.mystructures.lists;
 
-public class MyListAndQ<E> implements ListAndQAbstract<E> {
+import com.example.mystructures.queue.MyQueue;
+
+public class MyListAndQ<E> implements ListAndQAbstract<E> , MyQueue<E> {
 	
 	    private E[] internalArray;
 
@@ -13,10 +15,7 @@ public class MyListAndQ<E> implements ListAndQAbstract<E> {
 
 
 	    public boolean add(E e) {
-	        // TODO Auto-generated method stub
-
-//			E[] newArray = new E[this.internalArray.length + 1];
-
+	      
 	        E[] newArray = (E[]) new Object[this.internalArray.length + 1];
 
 	        for(int i = 0; i < internalArray.length; i++) {
@@ -28,6 +27,24 @@ public class MyListAndQ<E> implements ListAndQAbstract<E> {
 
 	        return true;
 	    }
+	    
+	    @Override
+		public boolean add(E e, int index) {
+			// TODO Auto-generated method stub
+	    	
+	    	if(index < internalArray.length)
+	    	{
+	    		internalArray[index] = e;
+	    		return true;
+	    	}
+	    	else
+	    	{
+	    		return false;
+	    	}
+	    	
+	    	
+			
+		}
 
 	    public E get(int index)
 	    {
@@ -45,11 +62,6 @@ public class MyListAndQ<E> implements ListAndQAbstract<E> {
 	        	return e;
 	        	
 	        }
-	        
-	        
-
-
-	        
 	    }
 
 
@@ -112,29 +124,12 @@ public class MyListAndQ<E> implements ListAndQAbstract<E> {
 
 
 
-	
-
-
-		@Override
-		public int size() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-
-		@Override
-		public boolean add(E e, int index) {
-			// TODO Auto-generated method stub
-			return false;
-		}
-
-
 		@Override
 		public void Print() {
 			// TODO Auto-generated method stub
 			
 			int a = internalArray.length;
-			System.out.println(a);
+			
 			for(int i=0; i<a; i++)
 			{
 				System.out.println(internalArray[i]);
@@ -143,6 +138,31 @@ public class MyListAndQ<E> implements ListAndQAbstract<E> {
 			
 			
 			
+		}
+
+
+		@Override
+		public E remove() {
+			// TODO Auto-generated method stub
+			 E[] newArray = (E[]) new Object[this.internalArray.length - 1];
+
+		        
+
+		        for(int i = 0; i < this.internalArray.length -1; i++) 
+		        {
+		            newArray[i] = this.internalArray[i];
+		        }
+		        return this.internalArray[0];
+
+		          
+		}
+
+
+		@Override
+		public int size() {
+			int a = internalArray.length;
+			
+			return a;
 		}
 
 
