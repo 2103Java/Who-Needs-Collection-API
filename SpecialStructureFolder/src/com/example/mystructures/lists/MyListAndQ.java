@@ -133,6 +133,15 @@ public class MyListAndQ<E> implements ListAndQAbstract<E> {
 		public void Print() {
 			// TODO Auto-generated method stub
 			
+			int a = internalArray.length;
+			System.out.println(a);
+			for(int i=0; i<a; i++)
+			{
+				System.out.println(internalArray[i]);
+			}
+				
+			
+			
 			
 		}
 
