@@ -43,6 +43,9 @@ public class MainDriver {
 
 		vegetables.remove("broc");
 		System.out.println(vegetables.toString());// prints set showing the item was removed
+
+		vegetables.add("celery");
+		System.out.println(vegetables.toString());// prints set showing the item was added
 	}
 
 }
