@@ -3,19 +3,19 @@ package com.example.mystructures.lists;
 public class BenImpl<E> implements MyList<E> {
 
 	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
 	public boolean add(E e, int index) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean add(E e) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public Object get(int index) {
+	public E get(int index) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -38,4 +38,11 @@ public class BenImpl<E> implements MyList<E> {
 		return false;
 	}
 
+	@Override
+	public boolean add(E e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	
 }

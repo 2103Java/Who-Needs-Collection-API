@@ -15,6 +15,8 @@ public interface MyList<E> extends RootStructure<E> {
 	boolean remove(int index);
 	
 	boolean update(E e, int index);
+
+	boolean add(E e);
 	
 	
 
