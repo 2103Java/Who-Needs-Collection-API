@@ -11,29 +11,29 @@ Examples are provided in the main driver and the results are printed to the cons
 
 ## Examples
 
-Create A Queue:
+Create A Queue:<br/>
 MyQueue<String> queue1 = new MyQueueAndListImpl<String>("bob", "john", "tony");
 
-Queue Methods:
-.add()
-.remove()
+Queue Methods:<br/>
+.add()<br/>
+.remove()<br/>
 .size()
 
-Create A List:
+Create A List:<br/>
 MyList<String> list1 = new MyQueueAndListImpl<String>("bird", "cat", "dog");
 
-List Methods:
-.add(T t, int index)
-.remove(int index)
-.update(T t, int index)
+List Methods:<br/>
+.add(T t, int index)<br/>
+.remove(int index)<br/>
+.update(T t, int index)<br/>
 .size()
 
-Create A Set:
+Create A Set:<br/>
 MySet<String> vegetables = new MySetImpl<String>("potato", "broc", "carrot");
 
-Set Methods:
-.add(T t)
-.remove(T t)
+Set Methods:<br/>
+.add(T t)<br/>
+.remove(T t)<br/>
 .size()
 
 ## Created with
