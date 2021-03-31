@@ -1,10 +1,9 @@
 package assignment;
 
 public class Set<T> extends RootStructure<T> {
-
+	
     public Set(T... array ) {
 		//var-args are dynamic, and can accept any number of arguments
-		//setStructure(array);
 
 		/*
 		 * If an array with duplicates is passed in, remove the extras as per requirements of a Set
@@ -36,6 +35,7 @@ public class Set<T> extends RootStructure<T> {
         }
         
         setStructure(duplicateFreeArray);
+        
 	}
     
     /**
@@ -58,6 +58,7 @@ public class Set<T> extends RootStructure<T> {
                     newArray[i] = getStructure()[i];
             }
             newArray[newArray.length - 1] = t;
+            
             setStructure(newArray);
             
             return true;
@@ -72,17 +73,24 @@ public class Set<T> extends RootStructure<T> {
             
             T[] newArray = (T[]) new Object[getStructure().length-1];
 
+            boolean elementFound = false;
+            
             for(int i=0, j=0; i < getStructure().length; i++) {
-                    if(getStructure()[i].equals(t)) 
+                    if(getStructure()[i].equals(t)) {
                             newArray[j++] = getStructure()[i];
+                            elementFound = true;
+                    }
             }
+
             setStructure(newArray);
             
-            return false;
+            if (elementFound) {
+            	return true;
+            } else {
+            	return false;
+            }
     }
     
-    public T get(int i) {
-    	return getStructure()[i];
-    }
+    
 
 }
